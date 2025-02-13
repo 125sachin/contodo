@@ -40,6 +40,12 @@ dependencies:
   injectable: ^2.5.0
   flutter_screenutil: ^5.9.3
   lottie: ^3.3.1
+  get_storage: ^2.1.1
+  firebase_core: ^3.11.0
+  firebase_auth: ^5.4.2
+  firebase_cloud_firestore: ^5.4.4
+  cloud_firestore: ^5.6.3
+  toastification: ^2.3.0
 
 dev_dependencies:
   flutter_test:

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "658328981928",
+    "project_id": "contodo-20da2",
+    "storage_bucket": "contodo-20da2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658328981928:android:9e7380259412b2e616cd9d",
+        "android_client_info": {
+          "package_name": "com.example.contodo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYeCIXEQaivsipoqRJqpeYqrEsTv3UIVk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
