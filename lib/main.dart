@@ -1,8 +1,13 @@
 import 'package:contodo/file_exporter.dart';
+import 'package:contodo/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 Future<void> servicesToInitialiseBeforeAppStart() async {
   try {
     WidgetsFlutterBinding.ensureInitialized();
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
     await setupLocator();
     await Future.wait([
       locator<LocalStorageService>().initStorage(),
@@ -32,12 +37,17 @@ class MyApp extends StatelessWidget {
         return ValueListenableBuilder(
             valueListenable: themeService.brightnessListenable,
             builder: ((context, value, child) {
-              return MaterialApp(
-                debugShowCheckedModeBanner: false,
-                title: 'Contodo',
-                onGenerateRoute: StackedRouter().onGenerateRoute,
-                navigatorKey: StackedService.navigatorKey,
-                initialRoute: Routes.splashView,
+              return ToastificationWrapper(
+                child: MaterialApp(
+                  debugShowCheckedModeBanner: false,
+                  title: 'Contodo',
+                  theme: ThemeData(
+                    brightness: themeService.brightness,
+                  ),
+                  onGenerateRoute: StackedRouter().onGenerateRoute,
+                  navigatorKey: StackedService.navigatorKey,
+                  initialRoute: Routes.splashView,
+                ),
               );
             }));
       },
