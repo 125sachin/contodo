@@ -8,6 +8,7 @@ class SplashView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<SplashViewModel>.nonReactive(
       viewModelBuilder: () => SplashViewModel(),
+      onViewModelReady: (viewModel) => viewModel.init(),
       builder: (context, viewModel, child) {
         return Scaffold(
           backgroundColor: context.colorScheme.appScaffold,
