@@ -1,6 +1,4 @@
 import 'package:contodo/file_exporter.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:contodo/ui/views/splash/splash_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 @lazySingleton
@@ -17,7 +15,6 @@ class FirebaseService {
       UserCredential userCredential = await _auth.signInWithEmailAndPassword(
           email: email, password: password);
       _localStorageService.write('token', userCredential.user?.uid);
-      print(userCredential.user!.email);
       return userCredential.user;
     } catch (e) {
       throw Exception(e.toString());

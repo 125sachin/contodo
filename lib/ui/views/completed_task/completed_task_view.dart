@@ -1,8 +1,4 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:contodo/core/services/firebase_services.dart';
-import 'package:contodo/core/services/toast_service.dart';
 import 'package:contodo/file_exporter.dart';
-import 'package:flutter/cupertino.dart';
 
 part 'completed_task_view_model.dart';
 part 'completed_task_view_components.dart';
@@ -101,6 +97,7 @@ class CompletedTaskView extends StatelessWidget {
                                             borderRadius:
                                                 BorderRadius.circular(10.0.w),
                                           ),
+                                          // ignore: deprecated_member_use
                                           fillColor: MaterialStateProperty
                                               .resolveWith<Color>(
                                                   (Set<WidgetState> states) {

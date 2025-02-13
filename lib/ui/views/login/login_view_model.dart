@@ -86,6 +86,7 @@ class LoginViewModel extends BaseViewModel {
                   _toastService.showToastMessage(
                       "Request Send", "Check your email for reset link",
                       type: ToastificationType.info);
+                  // ignore: use_build_context_synchronously
                   Navigator.of(context).pop();
                 }
                 // Dismiss the dialog
