@@ -36,7 +36,7 @@ class SignupView extends StatelessWidget {
                           ),
                           TextField(
                             decoration: InputDecoration(labelText: 'Password'),
-                            obscureText: false,
+                            obscureText: true,
                             onChanged: (value) => viewModel.setPassword(value),
                           ),
                           SizedBox(height: 20),

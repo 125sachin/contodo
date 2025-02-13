@@ -34,7 +34,7 @@ class LoginView extends StatelessWidget {
                           ),
                           TextField(
                             decoration: InputDecoration(labelText: 'Password'),
-                            obscureText: false,
+                            obscureText: true,
                             onChanged: (value) => viewModel.setPassword(value),
                           ),
                           Row(
