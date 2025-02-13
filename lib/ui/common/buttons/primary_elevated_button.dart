@@ -5,12 +5,14 @@ class _PrimaryElevated extends StatelessWidget {
   final String title;
   final Color? bgColor;
   final Color? borderColor;
+  final Color? textColor;
 
   const _PrimaryElevated({
     super.key,
     required this.onPressed,
     required this.title,
     this.bgColor,
+    this.textColor,
     this.borderColor,
   });
 
@@ -22,7 +24,7 @@ class _PrimaryElevated extends StatelessWidget {
         height: 36.h,
         padding: EdgeInsets.symmetric(vertical: 4.w, horizontal: 20.w),
         decoration: BoxDecoration(
-            color: bgColor ?? Colors.transparent,
+            // color: bgColor ?? Colors.transparent,
             borderRadius: BorderRadius.circular(30.r),
             border: Border.all(
               color: bgColor ?? context.colorScheme.ogWhite,
@@ -32,7 +34,7 @@ class _PrimaryElevated extends StatelessWidget {
           child: AppText(
             title,
             context,
-            color: context.colorScheme.ogWhite,
+            color: textColor ?? context.colorScheme.ogWhite,
           ).bodySmall,
         ),
       ),

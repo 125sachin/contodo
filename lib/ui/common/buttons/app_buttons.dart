@@ -32,6 +32,7 @@ class AppButton {
     required String title,
     Color? borderColor,
     Color? bgColor,
+    Color? textColor,
   }) =>
       _PrimaryElevated(
         key: key,
@@ -39,6 +40,7 @@ class AppButton {
         title: title,
         bgColor: bgColor,
         borderColor: borderColor,
+        textColor: textColor,
       );
 
   /// Returns a text button with optional styling.

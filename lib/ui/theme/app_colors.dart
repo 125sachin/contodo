@@ -5,19 +5,29 @@ extension ColorSchemeExtension on ColorScheme {
   Color get appSuccess => const Color(0xFF1FC87F);
   Color get appFailure => const Color(0xFFF05E4B);
 
-  Color get ogWhite => const Color(0xFFFFFFFF);
-  Color get ogBlack => const Color(0xFF000000);
+  Color get ogWhite => Brightness.dark == brightness
+      ? const Color.fromARGB(255, 56, 56, 56)
+      : const Color(0xFFFFFFFF);
+  Color get ogBlack => Brightness.dark == brightness
+      ? const Color(0xFFFFFFFF)
+      : const Color.fromARGB(255, 56, 56, 56);
 
   Color get appScaffold => Brightness.dark == brightness
-      ? Color(0xFFE2E2E2)
-      : const Color(0xFF121212);
+      ? const Color(0xFF121212)
+      : Color.fromARGB(255, 243, 238, 238);
 
   Color get bgOverlay => const Color(0xFF3D3D3D);
 
   // Text
-  Color get appText => const Color(0xFFE2E2E2);
-  Color get title => const Color(0xFFFBFBFB);
-  Color get subTitle => const Color(0xFFEFEFEF);
+  Color get appText => Brightness.dark == brightness
+      ? const Color(0xFFE2E2E2)
+      : const Color(0xFF121212);
+  Color get title => Brightness.dark == brightness
+      ? const Color(0xFFE2E2E2)
+      : const Color(0xFF121212);
+  Color get subTitle => Brightness.dark == brightness
+      ? const Color(0xFFE2E2E2)
+      : const Color(0xFF121212);
   Color get greenText => const Color(0xFF29B379);
 
   // View
