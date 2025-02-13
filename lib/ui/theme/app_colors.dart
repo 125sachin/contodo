@@ -8,7 +8,9 @@ extension ColorSchemeExtension on ColorScheme {
   Color get ogWhite => const Color(0xFFFFFFFF);
   Color get ogBlack => const Color(0xFF000000);
 
-  Color get appScaffold => const Color(0xFF121212);
+  Color get appScaffold => Brightness.dark == brightness
+      ? Color(0xFFE2E2E2)
+      : const Color(0xFF121212);
 
   Color get bgOverlay => const Color(0xFF3D3D3D);
 

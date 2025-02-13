@@ -19,6 +19,10 @@ export 'package:contodo/ui/common/buttons/app_buttons.dart';
 // Constants
 export 'package:contodo/core/constants/asset_constants.dart';
 
+// Services
+export 'package:contodo/core/services/local_storage_services.dart';
+export 'package:contodo/ui/theme/theme_service.dart';
+
 // Dependencies
 export 'package:stacked/stacked.dart';
 export 'package:stacked_services/stacked_services.dart';
