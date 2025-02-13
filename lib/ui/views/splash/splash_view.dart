@@ -1,3 +1,4 @@
+import 'package:contodo/core/services/firebase_services.dart';
 import 'package:contodo/file_exporter.dart';
 part 'splash_view_model.dart';
 
@@ -6,7 +7,7 @@ class SplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ViewModelBuilder<SplashViewModel>.nonReactive(
+    return ViewModelBuilder<SplashViewModel>.reactive(
       viewModelBuilder: () => SplashViewModel(),
       onViewModelReady: (viewModel) => viewModel.init(),
       builder: (context, viewModel, child) {
